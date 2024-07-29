@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Who is Alhassan?!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="shortcut icon" type="x-icon" href="images/Cartoonify.png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>.hover-section {
+		position: relative;
+	}
+	
+	.hover-image {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.hover-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.hover-image img.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the image fits within the container without being cropped */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hover-section:hover .hover-image img {
+    opacity: 0;
+}
+
+.hover-section:hover .hover-image img.hover {
+    opacity: 1;
+}
+
+.hover-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #2a2a2a; /* Updated to blend with the background */
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF5C35;
+}
+
+.waiting-text {
+    font-size: 18px;
+    color: #ffffff; /* Updated to white for better readability */
+    margin-top: 10px;
+}
+
+.dots::after {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    text-align: left;
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: '';
+    }
+    40% {
+        content: '.';
+    }
+    60% {
+        content: '..';
+    }
+    80%, 100% {
+        content: '...';
+    }
+}
+#banner {
+    background: #2a2a2a; /* Background color to match the theme */
+    color: white; /* Text color for readability */
+    padding: 4em 0;
+    text-align: center;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+/* Remove the cyan background and keep only the photo */
+#banner {
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    padding: 6em 0 2em 0 ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 0 !important;
+    cursor: default;
+    height: 60vh;
+    margin-bottom: -3.25em;
+    max-height: 32em;
+    min-height: 22em;
+    position: relative;
+    top: -3.25em;
+}
+
+#banner:after {
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#banner .inner {
+    position: relative;
+    z-index: 2;
+    padding: 0 !important;
+}
+
+#banner .image {
+    width: 100%;
+    height: 100%;
+    opacity: 1; /* Ensure the image is fully opaque */
+}
+
+#banner .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 1; /* Ensure the image is fully opaque */
+}
+
+#banner .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+#banner .image {
+    margin-bottom: 1em;
+}
+
+#banner .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners for the image */
+}
+
+#banner .major h3 {
+    font-size: 1.5em;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+#banner .content p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #FF5C35; /* Accent color for the quote */
+}
+</style>
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+			<!-- Banner -->
+			<!-- Note: The "style2" class below should match that of the header element. -->
+			<section id="banner" class="style2">
+				<div class="inner">
+					<span class="image">
+						<img src="images/forest.jpeg" alt="Image" />
+					</span>
+					<header class="major">
+						<h3>"You think you know someone, and then they surprise you." </h3>
+					</header>
+					<div class="content">
+						<p> Alicia Nash — A Beautiful Mind (2001)”</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+
+<!-- Two -->
+<section id="two" class="spotlights">
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images/conntecting2.jpeg" alt="connect" />
+			<img src="images/connecting.jpeg" alt="Connect Hover" class="hover" />
+
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>A passionate writer and captivating storyteller</h3>
+                </header>
+				<p>I am a person who loves to connect and communicate with people. My means of expression are through storytelling. Whether they are real stories inspired by my experiences (like those in my journey to earn <a href="story.html">global citizenship</a>, or fictional stories that draw from my life <a href="https://medium.com/@alhassan_69618">check my medium</a>, <a href="">and this drive</a> for some of my writtings) I am driven by the power of narrative.</p>
+				
+				<p>One of the points that also intrigues me in life is giving to others. I believe God created us as groups and societies to interact and help each other. The quote <strong><em><span style="color: red;">"with great power comes great responsibility"</span></em></strong> from Spider-Man resonates deeply with me. For the past three years, I have been unofficially mentoring several students back home, helping them achieve their dream of studying abroad. I am thankful that their efforts culminated in finally reaching their dreams, with me being a part of their story.</p>
+				
+				<p>I have shared my experiences and lessons learned academically, personally, and professionally in multiple podcasts featuring international students studying abroad.</p>
+				
+				<p><strong><u>Ta2shira</u></strong> in Arabic – <a href="https://open.spotify.com/episode/14tSId363l88wP20ojYIYr" target="_blank">link to Ta2shira podcast</a></p>
+				<p><strong><u>Qaisa Taleb</u></strong> in Arabic – <a href="https://open.spotify.com/episode/1xzArmclVJfbOx1HsuI7tF?fbclid=IwZXh0bgNhZW0CMTEAAR1zkUUEYmbJPNQHg8bAGK6ti_yIERiR6R6PsI15L7NcpCmCCBd3Ck9ptw0_aem_8sM9pIAQHpCChlYrNIDszw" target="_blank">link to Qaisa Taleb podcast</a></p>
+				<p><strong><u>Humans of Minerva</u></strong> in English – <a href="https://share.descript.com/view/7BT2ZTauWh7" target="_blank">link to Humans of Minerva podcast</a></p>
+				
+        
+            </div>
+        </div>
+    </section>
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images/hallassan.png" alt="San Francisco" />
+            <img src="images/Bussan Nights.jpeg" alt="San Francisco Hover" class="hover" />
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+				<h3>Avid Gamer, Nocturnal City Explorer, and Passionate Hiker</h3>
+				</header>
+				<p>I have been an avid FIFA player since middle school, deeply involved in many communities of players in Egypt who played Ultimate Team, the online mode of FIFA. After traveling abroad for university, I had to part ways with my PlayStation, but the passion for the game remained. Fortunately, one of my classmates has a PS5, allowing me to continue playing FIFA with friends every now and then. This hobby keeps me connected to my love for soccer, even though my skills in real football don't quite match up to my virtual prowess.</p>
+				<p>In addition to gaming, I find joy in exploring cities at night. There is something magical about the city after sunset. I love taking long walks, discovering hidden corners and quiet streets that come alive in a different way under the night sky. These nocturnal explorations have allowed me to see different dimensions of the cities I've lived in. In San Francisco, I witnessed the stark contrast to the city's daytime reputation as a tech paradise and gold mine for tech-savvy individuals. At night, the streets are often empty, save for the pitiful homeless who cannot afford a place to live. In Korea, my night walks in December and January were filled with calm, cold city vibes. Despite the biting cold, there was a warm feeling of safety and peacefulness. In Berlin, the nights felt harsh, gloomy, and dark, adding a different layer of experience to my stay there. These nocturnal explorations allow me to appreciate the beauty and tranquility of the urban environment, find inspiration in solitude, and reflect on my day. It's a unique hobby that combines my love for adventure and my curiosity about the world around me.</p>
+				<p>Another way I connect with my surroundings is through hiking. This hobby allows me to find peace away from the hustle and bustle of everyday life. In Korea, I explored the majestic Halassan and Bukhasan mountains, where the stunning landscapes and challenging trails provided a sense of accomplishment and serenity. In San Francisco, my favorite hiking spots include Twin Peaks, Mount Sutro, and Battery Spencer. Twin Peaks offers breathtaking panoramic views of the city, Mount Sutro provides a lush, forested escape right in the heart of the city, and Battery Spencer gives a unique perspective of the Golden Gate Bridge and the bay. Each hike is a new adventure that brings with it a sense of accomplishment and a deeper appreciation for the outdoors.</p>
+		
+			</div>
+		</div>
+	</section>
+					
+		
+    </section>
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images/Marvel 2.jpeg" alt="Seoul" />
+            <img src="images/Marvel 1.jpeg" alt="Seoul Hover" class="hover" />
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>Anime otaku, Marvel Fan, </h3>
+                </header>
+				<p>As an avid fan of TV shows and movies, I immerse myself in the captivating worlds of anime, Marvel, "Game of Thrones," and Harry Potter. Being an <strong>Anime Otaku</strong>, I have a deep appreciation for the artistry, storytelling, and character development that anime offers. Shows like "Naruto," "Attack on Titan," and "My Hero Academia" have not only entertained me but also taught me valuable life lessons about perseverance, friendship, and courage. I enjoy diving into different genres, from action-packed shonen to heartwarming slice-of-life stories, always eager to discover new and exciting series.</p>
+        
+        <p>On the other hand, my love for the Marvel Universe runs just as deep. As a <strong>Marvel Fan</strong>, I have been enthralled by the intricate storytelling and interconnected narratives that span across movies and TV shows. From the epic adventures of the Avengers to the gripping tales of the X-Men, the Marvel Cinematic Universe (MCU) has kept me on the edge of my seat. The blend of superhero action, humor, and emotional depth in series like "WandaVision," "Loki," and "The Falcon and the Winter Soldier" has made the MCU a significant part of my entertainment landscape.</p>
+        
+        <p>Additionally, my zeal for <strong>Game of Thrones</strong> has been an exciting journey through the complex and politically charged world of Westeros. The intricate plotlines, compelling characters, and unexpected twists in "Game of Thrones" have made it a series that I passionately followed. The show's ability to blend fantasy elements with real human drama has provided countless hours of gripping entertainment and profound reflection on themes like power, loyalty, and survival.</p>
+        
+        <p>Moreover, I am an admirer of the <strong>Harry Potter</strong> series. The magical world created by J.K. Rowling has been a significant part of my childhood and continues to enchant me to this day. The adventures of Harry, Hermione, and Ron at Hogwarts School of Witchcraft and Wizardry have ignited my imagination and instilled in me a sense of wonder and the belief in the extraordinary. The themes of friendship, bravery, and the fight against evil resonate deeply with me.</p>
+
+            </div>
+        </div>
+    </section>
+
+</section>
+			<!-- Contact Section -->
+			<section id="contact">
+				<div class="inner">
+					<section>
+						<form method="post" action="#">
+							<div class="form-field">
+								<label for="name">Your Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="form-field">
+								<label for="email">Your Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="form-field full">
+								<label for="message">Message</label>
+								<textarea name="message" id="message" rows="6"></textarea>
+							</div>
+							<div class="actions">
+								<input type="submit" value="Send Message" class="primary" />
+								<input type="reset" value="Clear" class="clear" />
+							</div>
+						</form>
+					</section>
+					<div class="contact-container">
+						<div class="contact-method">
+							<span class="icon solid alt fa-envelope"></span>
+							<div class="contact-info">
+								<h3>Email</h3>
+								<a href="mailto:alhassan@uni.minerva.edu">alhassan@uni.minerva.edu</a>
+							</div>
+						</div>
+						<div class="contact-method">
+							<span class="icon solid alt fa-phone"></span>
+							<div class="contact-info">
+								<h3>Phone</h3>
+								<span>(628) 246-5952</span>
+							</div>
+						</div>
+						<div class="contact-method">
+							<span class="icon solid alt fa-home"></span>
+							<div class="contact-info">
+								<h3>Address</h3>
+								<span>851 California St<br>San Francisco, CA 94108<br>United States of America</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+	
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/Alhassan777" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/alhassan-ahmed-6b3985203/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://medium.com/@alhassan_69618" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+						<li><a href="https://www.instagram.com/alhassanahmedabd/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; 2024 Alhassan Ahmed™. All Rights Reserved To My Family and Friends for making me the person I am today.</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script type="text/javascript">
+		(function() {
+			emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
+		})();
+
+		document.getElementById('contact-form').addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent the default form submission
+			
+			// Get form data
+			const formData = new FormData(this);
+			
+			// Log form data for debugging
+			for (const [key, value] of formData.entries()) {
+				console.log(`${key}: ${value}`);
+			}
+			
+			// Send form data using EmailJS
+			emailjs.sendForm('service_sn2wiaf', 'template_3ppwape', this)
+				.then(function() {
+					alert('Message sent successfully!');
+				}, function(error) {
+					console.log('FAILED...', error); // Log the error to the console for debugging
+					alert('Failed to send the message. Please try again.');
+				});
+		});
+	</script>		
+</body>
+</html>

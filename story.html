@@ -1,0 +1,460 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Who is Alhassan?!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="shortcut icon" type="x-icon" href="images/Cartoonify.png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>.hover-section {
+		position: relative;
+	}
+	
+	.hover-image {
+		position: relative;
+		overflow: hidden;
+	}
+	
+	.hover-image img {
+		width: 100%;
+		transition: opacity 0.3s ease;
+	}
+	
+	.hover-image img.hover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+	
+	.hover-section:hover .hover-image img {
+		opacity: 0;
+	}
+	
+	.hover-section:hover .hover-image img.hover {
+		opacity: 1;
+	}
+	.hover-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hover-image {
+    flex: 1;
+}
+
+.hover-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #2a2a2a; /* Updated to blend with the background */
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF5C35;
+}
+
+.waiting-text {
+    font-size: 18px;
+    color: #ffffff; /* Updated to white for better readability */
+    margin-top: 10px;
+}
+
+.dots::after {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    text-align: left;
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: '';
+    }
+    40% {
+        content: '.';
+    }
+    60% {
+        content: '..';
+    }
+    80%, 100% {
+        content: '...';
+    }
+}
+#banner {
+    background: #2a2a2a; /* Background color to match the theme */
+    color: white; /* Text color for readability */
+    padding: 4em 0;
+    text-align: center;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+/* Remove the cyan background and keep only the photo */
+#banner {
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    padding: 6em 0 2em 0 ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 0 !important;
+    cursor: default;
+    height: 60vh;
+    margin-bottom: -3.25em;
+    max-height: 32em;
+    min-height: 22em;
+    position: relative;
+    top: -3.25em;
+}
+
+#banner:after {
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#banner .inner {
+    position: relative;
+    z-index: 2;
+    padding: 0 !important;
+}
+
+#banner .image {
+    width: 100%;
+    height: 100%;
+    opacity: 1; /* Ensure the image is fully opaque */
+}
+
+#banner .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 1; /* Ensure the image is fully opaque */
+}
+
+#banner .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+#banner .image {
+    margin-bottom: 1em;
+}
+
+#banner .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners for the image */
+}
+
+#banner .major h3 {
+    font-size: 1.5em;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+#banner .content p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #FF5C35; /* Accent color for the quote */
+}
+</style>
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+			<!-- Banner -->
+			<!-- Note: The "style2" class below should match that of the header element. -->
+			<section id="banner" class="style2">
+				<div class="inner">
+					<span class="image">
+						<img src="images/IMG_0879.jpg" alt="Image" />
+					</span>
+					<header class="major">
+						<h3>“It’s a dangerous business, Frodo, going out your door. You step onto the road, and if you don’t keep your feet, there’s no knowing where you might be swept off to”</h3>
+					</header>
+					<div class="content">
+						<p>— Bilbo Baggins, The Lord of the Rings: The Fellowship of the Ring</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+
+<!-- Two -->
+<section id="two" class="spotlights">
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images/CAiro.jpeg" alt="Cairo" />
+            <img src="images/Cairo Hover.jpeg" alt="Cairo Hover" class="hover" />
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>Cairo, Egypt</h3>
+                </header>
+                <p>
+                    I was born and raised in Egypt, where I spent the first 17 years of my life. We were a lovely family of four, and I cherished every moment at home. However, I didn't spend all those years under one roof. I attended a specialized STEM boarding school, a groundbreaking program by USAID and the Egyptian Ministry of Education, aimed at preparing the next generation of Egyptian leaders.
+                </p>
+                <p>
+                    During my three years at this school, I took on the challenge of creating Capstone projects that addressed significant issues in Egyptian society. One project focused on innovative architecture to tackle housing problems, another on environmental engineering solutions for cleaner cities, and the third on developing alternative energy sources to power our future. These projects weren't just academic exercises; they won competitions and brought real solutions to the table.
+                </p>
+                <p>
+                    But beyond the accolades and achievements, the most rewarding part was the friendships I forged. The school, which I initially resented for taking me away from my family at a young age, became my second home. The friends I made there are like brothers to me, and the experience was a divine step in my destiny, preparing me for the next leap in my life.
+                </p>
+        
+            </div>
+        </div>
+    </section>
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images/SF .jpeg" alt="San Francisco" />
+            <img src="images/SF hover.jpeg" alt="San Francisco Hover" class="hover" />
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>San Francisco, United States</h3>
+                </header>
+                <p>
+					One of my dreams since childhood was to live in San Francisco. The Golden Gate Bridge, the breathtaking scenes from the movie San Andreas, and the incredible blend of green nature, blue ocean, and modern skyscrapers always fascinated me. I would tell myself, “I should be there one day.” And guess what? It happened.
+				</p>
+				<p>
+					I never imagined or believed I would be studying abroad before even becoming a legal adult, as I traveled when I was just 17. I applied to a university with a 2% acceptance rate, recognized as the #1 top innovative university by the World University Rankings for Innovation (WURI). Could I be one of those 120 students selected globally for my cohort? Is that even possible? I didn’t even consider applying abroad until the summer of my senior year, which was two years later than most others.
+				</p>
+				<p>
+					Arriving in San Francisco and joining Minerva was surreal. The scenes from "The Pursuit of Happyness," "Ant-Man," and "GTA" turned out to be true. The city, with its stunning views and vibrant culture, quickly became my new home. I was immersed in a diverse community of brilliant minds from over 40 countries. Getting exposed to such a huge diversity of cultures and ideas was overwhelming but incredibly enriching. It taught me to think critically, adapt quickly, and embrace different perspectives.
+				</p>
+				<p>
+					One of the highlights of my time in San Francisco was my involvement with YouthSF, a local organization dedicated to empowering young people. Through YouthSF, I had the opportunity to work on community projects, mentor younger students, and develop leadership skills. This experience was incredibly fulfilling and allowed me to give back to the community that had welcomed me so warmly.
+				</p>
+            </div>
+        </div>
+    </section>
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images/Korea.jpg" alt="Seoul" />
+            <img src="images/Koreahover.jpg" alt="Seoul Hover" class="hover" />
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>Seoul, South Korea</h3>
+                </header>
+				<p>
+					To start the actual unique experience of my university, Minerva, I went to Seoul, South Korea, in my sophomore year. I was not very familiar with Korean culture since I wasn't a top fan of K-drama (now I am, and shoutout to "Mouse" and "Train to Busan" for introducing me to it). It was my first time living in a country where I didn't understand or speak the language. The food culture was very different for me, as I hated eating instant noodles and seafood.
+				</p>
+				<p>
+					I won't hide it; my first three weeks there were terrible. But then I decided to open my eyes and see the beauty of the country. Korea was literally a paradise. Green spaces everywhere. The people were incredibly friendly, and the streets were always safe, even if you walked late at night (especially important for someone who witnessed a murder and was almost kidnapped in the streets of San Francisco).
+				</p>
+				<p>
+					I immersed myself in the culture by visiting Busan and Jeju as well. Busan, with its beautiful beaches and bustling city life, and Jeju, with its stunning natural landscapes and volcanic formations, were highlights of my time in Korea.
+				</p>
+				<p>
+					Living in Seoul taught me to embrace new experiences and step out of my comfort zone. I explored traditional markets, tried new foods, and even picked up some basic Korean phrases. The city's blend of ancient palaces and modern skyscrapers was mesmerizing.
+				</p>
+				<p>
+					While in Seoul, I also had the incredible opportunity to work with Infinyx Co., a forward-thinking company dedicated to innovative solutions in technology. My experience there was eye-opening and contributed significantly to my professional growth. Working with a team that was passionate about leveraging technology to solve real-world problems was inspiring and aligned perfectly with my career aspirations.
+				</p>
+            </div>
+        </div>
+    </section>
+    <section class="hover-section">
+        <div class="hover-image">
+            <img src="images/Germany Hover.jpg" alt="Berlin" />
+            <img src="images/Europe.jpg" alt="Berlin Hover" class="hover" />
+        </div>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>(Paris, Prague, Brussels Berlin Corfu), Europe</h3>
+                </header>
+                <p>
+					My next spring was spent in Berlin, a city that would challenge me in unexpected ways. I had learned German as a second language in high school alongside English and Arabic, so finally being able to master the language while living among the natives felt incredibly fulfilling.
+				</p>
+				<p>
+					Berlin brought mixed feelings. On one hand, I felt an immense sense of belonging. The significant presence of Arabs and Muslims made it feel like a home away from home. There was even a street known as "Arab Street" with so many Arab stores that it felt like walking through the streets of Cairo. The one-hour time difference between Berlin and home made it easy to stay connected with my family and friends, which brought a sense of comfort.
+				</p>
+				<p>
+					However, the weather in Berlin was something I struggled with deeply. It was the gloomiest place I had ever been. During the first month, I woke up and went to sleep in darkness—an eerie contrast to the sun-drenched days I was used to. This constant gloominess weighed heavily on my spirit, making it difficult to adjust.
+				</p>
+				<p>
+					Despite the challenging weather, Berlin had its own unique beauty. The history, the culture, and the people made every day an adventure. I had the incredible opportunity to travel to four more countries outside Germany: France, Belgium, Greece, and the Czech Republic. Each trip was a revelation. Standing beneath the Eiffel Tower was a dream come true. Brussels' modern charm, Prague's medieval allure, and Corfu's sunny beaches were unforgettable. But amidst these travels, I faced significant hardships. My laptop and iPad were stolen, and my phone broke (which costed me around <b>3000$</b>).
+				</p>
+				<p>
+					But through these challenges, Berlin taught me resilience. I learned to navigate adversity and find strength in myself. The setbacks I faced didn't define my experience; rather, they highlighted my capacity to overcome. Berlin, with its stark contrasts and rich history, became a place of profound personal growth. Berlin wasn’t just a city; it was a crucial chapter in my journey, a place that tested my limits and expanded my horizons. It taught me that even in the darkest times, there is always light to be found.
+				</p>
+            </div>
+        </div>
+    </section>
+	<section class="hover-section">
+		<div class="hover-image">
+			<img src="images/argentina flag.png" alt="Buenos Aires" />
+			<img src="images/Argentina hover.jpg" alt="Buenos Aires Hover" class="hover" />
+		</div>
+		<div class="content">
+			<div class="inner">
+				<header class="major">
+					<h3>Buenos Aires, Argentina</h3>
+				</header>
+				<div class="loader-container">
+					<div class="loading-text">Loading<span class="dots"></span></div>
+					<div class="waiting-text">Wait for the stories and adventures of your <b>favorite global citizen!!</b></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+			<!-- Contact -->
+			<section id="contact">
+				<div class="inner">
+					<section>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field half">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field half">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="6"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" class="primary" /></li>
+								<li><input type="reset" value="Clear" /></li>
+							</ul>
+						</form>
+					</section>
+					<section class="split">
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="mailto:alhassan@uni.minerva.edu">alhassan@uni.minerva.edu</a>
+							</div>
+						</section>
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-phone"></span>
+								<h3>Phone</h3>
+								<span>(628) 245-5952 </span>
+							</div>
+						</section>
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-home"></span>
+								<h3>Address</h3>
+								<span>851 California St<br />
+								San Francisco, CA 94108<br />
+								United States of America</span>
+							</div>
+						</section>
+					</section>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://github.com/Alhassan777" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/alhassan-ahmed-6b3985203/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://medium.com/@alhassan_69618" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+						<li><a href="https://www.instagram.com/alhassanahmedabd/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; 2024 Alhassan Ahmed™. All Rights Reserved To My Family and Friends for making me the person I am today.</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script type="text/javascript">
+		(function() {
+			emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
+		})();
+
+		document.getElementById('contact-form').addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent the default form submission
+			
+			// Get form data
+			const formData = new FormData(this);
+			
+			// Log form data for debugging
+			for (const [key, value] of formData.entries()) {
+				console.log(`${key}: ${value}`);
+			}
+			
+			// Send form data using EmailJS
+			emailjs.sendForm('service_sn2wiaf', 'template_3ppwape', this)
+				.then(function() {
+					alert('Message sent successfully!');
+				}, function(error) {
+					console.log('FAILED...', error); // Log the error to the console for debugging
+					alert('Failed to send the message. Please try again.');
+				});
+		});
+	</script>		
+</body>
+</html>
