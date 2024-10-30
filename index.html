@@ -4,70 +4,180 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="x-icon" href="images/Cartoonify.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Alhassan Ahmed's Website</title>
+    <title>Discover Alhassan Ahmed's World</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+        }
+
         .vh-100 {
             height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         .gradient-custom {
-            background: linear-gradient(90deg, rgba(20, 147, 220, 1) 0%, rgba(130, 88, 216, 1) 100%);
+            background: linear-gradient(135deg, 
+                #DEDEEA, /* Lightest purple */
+                #BCB9D8, /* Light purple */
+                #8488B5, /* Medium purple */
+                #98BFD0, /* Light blue */
+                #78ACC1, /* Medium blue */
+                #61678B  /* Darkest blue */
+            );
         }
-        .input-group-text {
+
+        .text-box {
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        /* Main Heading */
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #FFFFFF; /* Pure white for maximum contrast */
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow to enhance readability */
+        }
+
+        /* Subtitle */
+        p {
+            font-size: 1.4rem;
+            font-family: 'Dancing Script', cursive;
+            color: #FFFFFF; /* Crisp white for maximum contrast */
+            font-weight: 500; /* Slightly bolder for readability */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Light shadow for better clarity */
+            margin-bottom: 2rem;
+        }
+            
+        /* Path card styling with softer shadow and light border */
+        .path-card {
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 0.5rem;
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
             cursor: pointer;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
+
+        /* Path card hover effect */
+        .path-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+            background-color: rgba(255, 255, 255, 0.1);
         }
-        @keyframes blink {
-            50% { border-color: transparent; }
+
+        .path-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #FFD700;
+            margin-bottom: 0.3rem;
         }
-        .animate-typing {
+
+        .path-description {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.4;
+            margin-top: 0.5rem;
+        }
+
+        @keyframes subtlePulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .path-emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            animation: subtlePulse 5s infinite ease-in-out;
+        }
+
+        .path-card:hover .path-emoji {
+            transform: translateY(-2px);
+            animation: none;
+        }
+
+        .explore-button {
+            font-size: 1rem;
+            padding: 0.75rem 2rem;
+            border: 2px solid #FFD700;
+            color: #FFD700;
+            background-color: transparent;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            font-weight: bold;
             display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid;
-            animation: typing 3s steps(30, end), blink .75s step-end infinite;
+        }
+
+        .explore-button:hover {
+            background-color: #FFD700;
+            color: #000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Mini Avatar Styling */
+        .mini-avatar {
+            display: block;
+            width: 150px; /* Increase the width */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0 auto;
+            margin-top: 0.1rem; /* Space between button and avatar */
         }
     </style>
 </head>
 <body>
     <section class="vh-100 gradient-custom">
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
-                        <div class="card-body p-5 text-center">
-                            <div class="mb-md-5 mt-md-4 pb-5">
-                                <h2 class="fw-bold mb-2 text-uppercase">Welcome</h2>
-                                <p class="text-white-50 mb-5">Login to explore more about Alhassan Ahmed!</p>
-                                <div class="form-outline form-white mb-4">
-                                    <input type="email" id="typeEmailX" class="form-control form-control-lg" readonly />
-                                    <label class="form-label" for="typeEmailX">Email</label>
-                                </div>
-                                <div class="form-outline form-white mb-4">
-                                    <div class="input-group">
-                                        <input type="text" id="typePasswordX" class="form-control form-control-lg" readonly />
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" id="togglePassword">
-                                                <i class="fas fa-eye-slash"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <label class="form-label" for="typePasswordX">Password</label>
-                                </div>
-                                <button class="btn btn-outline-light btn-lg px-5" type="submit" onclick="login()">Login</button>
-                            </div>
-                            <div>
-                                <p class="mb-5" style="color: red;">Trust me, you are in the right place to view my personal website 👍</p>
-                            </div>
-                        </div>
-                    </div>
+        <div class="container text-center">
+            <div class="text-box">
+                <h1>🌍 Step into My World</h1>
+                <p>Choose a path to explore different sides of who I am</p>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Recruiters Path -->
+                <div class="col-md-3 path-card" onclick="navigateTo('professional')">
+                    <div class="path-emoji">💼 👔</div>
+                    <div class="path-title">For Recruiters</div>
+                    <div class="path-description">See my career journey, skills, and portfolio.</div>
                 </div>
+                <!-- International Students Path -->
+                <div class="col-md-3 path-card" onclick="navigateTo('student')">
+                    <div class="path-emoji">🧑🏽‍🎓 ✈️</div>
+                    <div class="path-title">For International Students</div>
+                    <div class="path-description">Follow my global journey and insights for studying abroad.</div>
+                </div>
+                <!-- Curious Minds Path -->
+                <div class="col-md-3 path-card" onclick="navigateTo('personal')">
+                    <div class="path-emoji">✨ 🧠</div>
+                    <div class="path-title">For Curious Minds</div>
+                    <div class="path-description">Learn more about who I am beyond work.</div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <!-- Updated the button to use direct navigation -->
+                <button class="explore-button" onclick="window.location.href='homepage.html'">🌌 Make your own way through My World</button>
+                <img src="images/Upload Image removebg.png" alt="Mini Avatar" class="mini-avatar">
             </div>
         </div>
     </section>
@@ -77,43 +187,16 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.getElementById('togglePassword').addEventListener('click', function (e) {
-            // toggle the type attribute
-            const password = document.getElementById('typePasswordX');
-            const icon = this.querySelector('i');
-            if (password.type === 'password') {
-                password.type = 'text';
-                icon.classList.remove('fa-eye');
-                icon.classList.add('fa-eye-slash');
+        function navigateTo(section) {
+            if (section === 'professional') {
+                window.location.href = "experience.html"; // Link to Professional Experience page
+            } else if (section === 'student') {
+                window.location.href = "story.html"; // Link to International Student Journey page
+            } else if (section === 'personal') {
+                window.location.href = "aboutme.html"; // Link to Personal Story and Interests page
             } else {
-                password.type = 'password';
-                icon.classList.remove('fa-eye-slash');
-                icon.classList.add('fa-eye');
+                window.location.href = "homepage.html"; // Link to a general Explore page showing all sections
             }
-        });
-
-        function login() {
-            // Redirect to your personal website or homepage
-            window.location.href = "homepage.html"; // Replace with your actual homepage URL
-        }
-
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const email = "alhassan@uni.minerva.edu";
-            const password = "Welcome2Alhassan";
-            typeEffect(document.getElementById('typeEmailX'), email, 0);
-            typeEffect(document.getElementById('typePasswordX'), password, 1000);
-        });
-
-        function typeEffect(element, text, delay) {
-            element.value = "";
-            let i = 0;
-            setTimeout(function type() {
-                if (i < text.length) {
-                    element.value += text.charAt(i);
-                    i++;
-                    setTimeout(type, 100);
-                }
-            }, delay);
         }
     </script>
 </body>
