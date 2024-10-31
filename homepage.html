@@ -13,6 +13,154 @@
             emailjs.init("m_gvD1pvzYaFjtJ6C"); // Replace with your actual EmailJS Public Key as the User ID
         })();
     </script>
+    <style>
+        /* Define accent color variables based on the provided palette */
+        :root {
+            --light-blue: #DEDEEA;
+            --medium-light-blue: #BCB9D8;
+            --medium-blue: #8488B5;
+            --darker-blue: #61678B;
+            --light-cyan: #98BFD0;
+            --medium-cyan: #78ACC1;
+            --white: #FFFFFF;
+        }
+    
+        /* General Background and Font Colors */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    
+        /* Header and Footer */
+        #header, #footer {
+            background-color: var(--medium-blue);
+            color: var(--white);
+            border-bottom: 2px solid var(--medium-light-blue);
+        }
+    
+        /* Header Navigation */
+        #header .links a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        #header .links a:hover {
+            color: var(--white);
+        }
+    
+        /* Banner */
+        #banner {
+            background-color: var(--light-blue);
+            color: var(--white);
+        }
+       
+        #banner .content p {
+            color: var(--white);
+        }
+        #banner .highlight {
+            color: var(--white);
+        }
+    
+        /* Main Tiles Section */
+        #main .tiles article {
+            background-color: var(--light-blue);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1,p {
+            color: var(--white);
+        }
+    
+        /* Contact Section Styling */
+        #contact {
+            padding: 40px 0;
+            border-top: 2px solid var(--medium-light-blue);
+            background-color: var(--darker-blue); /* Darker background */
+        }
+    
+        /* Contact Method Titles */
+        #contact .contact-method h3 {
+            color: var(--light-cyan); /* Lighter color for contrast */
+            font-weight: bold;
+        }
+    
+        /* Contact Info Text */
+        #contact .contact-info {
+            color: var(--light-blue); /* Lighten text color */
+        }
+    
+        /* Form Styling */
+        #contact-form .form-field label {
+            color: var(--light-cyan); /* Lighten label text */
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+    
+        /* Input Fields */
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form textarea {
+            background-color: var(--medium-light-blue); /* Match background color */
+            color: var(--light-blue); /* Text color inside input fields */
+            border: 1px solid var(--medium-light-blue);
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+    
+        /* Input Fields Focus */
+        #contact-form input[type="text"]:focus,
+        #contact-form input[type="email"]:focus,
+        #contact-form textarea:focus {
+            border-color: var(--light-cyan); /* Lighter border on focus */
+        }
+        /* Button Styling */
+        .submit{
+            background-color: var(--medium-light-blue); /* Light purple color */
+            color: var(--white); /* White text for contrast */
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            border: none; /* Remove border for cleaner look */
+            transition: background-color 0.3s ease;
+        }
+        .clear{
+            background-color: var(--medium-light-blue); /* Light purple color */
+            color: var(--white); /* White text for contrast */
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            border: none; /* Remove border for cleaner look */
+            transition: background-color 0.3s ease;
+        }
+        /* Footer Styling */
+        #footer {
+            background-color: var(--medium-blue);
+            color: var(--white);
+            padding: 20px 0;
+        }
+        #footer .icons a {
+            color: var(--light-cyan);
+            padding: 10px;
+        }
+        #footer .icons a:hover {
+            color: var(--white);
+        }
+        #footer .copyright {
+            color: var(--white);
+            font-size: 0.9em;
+        }
+    </style>
+    
 </head>
 <body class="is-preload">
 
@@ -43,7 +191,7 @@
                     <h1>Heyo, my name is (E)Alhassan</h1>
                 </header>
                 <div class="content">
-                    <p>I AM AN INTERNATIONAL STUDENT AT MINERVA UNIVERSITY, PASSIONATE ABOUT <a href="projects.html" class="highlight">BUILDING PRODUCTS</a>. 
+                    <p style="color: #61678B;">I AM AN INTERNATIONAL STUDENT AT MINERVA UNIVERSITY, PASSIONATE ABOUT <a href="projects.html" class="highlight">BUILDING PRODUCTS</a>. 
                         WITH <a href="experience.html" class="highlight">EXPERIENCE</a> IN PRODUCT MANAGEMENT, DATA ANALYSIS, AND AI-POWERED SOLUTIONS, I AIM TO 
                         CREATE INNOVATIVE PRODUCTS THAT MAKE A POSITIVE IMPACT ON SOCIETY.</p>
                 </div>
@@ -113,8 +261,8 @@
                                 </div>
                             </div>
                             <ul class="actions">
-                                <li><input type="submit" value="Send Message" class="primary" /></li>
-                                <li><input type="reset" value="Clear" /></li>
+                                <li><input type="submit" value="Send Message" class="submit" /></li>
+                                <li><input type="reset" value="Clear" class="clear" /></li>
                             </ul>
                         </form>
                     </section>

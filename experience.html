@@ -192,22 +192,96 @@
             font-weight: bold;
             color: var(--medium-cyan);
         }
+         /* Button container styling */
+         .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the buttons */
+        .square-button, .rectangular-button {
+            background-color: var(--medium-blue);
+            color: var(--white);
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .square-button {
+            width: 200px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rectangular-button {
+            width: 200px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .square-button:hover, .rectangular-button:hover {
+            background-color: var(--medium-cyan);
+        }
+        /* Enhanced button container styling */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Button container styling for full width and edge alignment */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%; /* Full width of the container */
+            margin-bottom: 30px;
+        }
+
+        /* Aesthetic button styling */
+        .button-container a {
+            background-color: var(--medium-cyan); /* Button color */
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: fit-content;
+        }
+
+        .button-container a:hover {
+            background-color: var(--medium-blue);
+            transform: scale(1.05);
+        }
     </style>
     
     
 </head>
 <body class="is-preload">
     <div id="wrapper">
-        <!-- Header with Navigation Buttons -->
-        <header id="header" class="alt style2">
-            <div class="text-center nav-buttons">
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-            </div>
-        </header>
+        
         <!-- Section: Timeline -->
         <section class="py-5">
             <div class="container">
+                <div class="container">
+                <div class="button-container">
+                    <a href="homepage.html"> Unfold the Rest of the Journey 🌌 ?!</a>
+                    <a href="projects.html">Wanna See My Portfolio 💻 ?!</a>
+                </div>
                 <h1 class="text-center mb-5">My Professional Journey 🧑‍💼</h1>
                 <h3 class="text-center mb-5">"سبع صنايع والبخت ضايع 🤦‍♂️"</h3>
                 <ul class="timeline">
