@@ -206,6 +206,10 @@
     color: #FF5C35; /* Accent color for the quote */
 }
 </style>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() { emailjs.init("m_gvD1pvzYaFjtJ6C"); })(); // Replace with your actual EmailJS Public Key
+</script>
 	</head>
 
 	<body class="is-preload">
@@ -335,126 +339,103 @@
             </div>
         </div>
     </section>
-	<section class="hover-section">
-		<div class="hover-image">
-			<img src="images/argentina flag.png" alt="Buenos Aires" />
-			<img src="images/Argentina hover.jpg" alt="Buenos Aires Hover" class="hover" />
-		</div>
-		<div class="content">
-			<div class="inner">
-				<header class="major">
-					<h3>Buenos Aires, Argentina</h3>
-				</header>
-				<div class="loader-container">
-					<div class="loading-text">Loading<span class="dots"></span></div>
-					<div class="waiting-text">Wait for the stories and adventures of your <b>favorite global citizen!!</b></div>
-				</div>
-			</div>
-		</div>
-	</section>
+		
 </section>
-			<!-- Contact -->
-			<section id="contact">
-				<div class="inner">
-					<section>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
-								</div>
-								<div class="field half">
-									<label for="email">Email</label>
-									<input type="text" name="email" id="email" />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="6"></textarea>
-								</div>
-							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" class="primary" /></li>
-								<li><input type="reset" value="Clear" /></li>
-							</ul>
-						</form>
-					</section>
-					<section class="split">
-						<section>
-							<div class="contact-method">
-								<span class="icon solid alt fa-envelope"></span>
-								<h3>Email</h3>
-								<a href="mailto:alhassan@uni.minerva.edu">alhassan@uni.minerva.edu</a>
-							</div>
-						</section>
-						<section>
-							<div class="contact-method">
-								<span class="icon solid alt fa-phone"></span>
-								<h3>Phone</h3>
-								<span>(628) 245-5952 </span>
-							</div>
-						</section>
-						<section>
-							<div class="contact-method">
-								<span class="icon solid alt fa-home"></span>
-								<h3>Address</h3>
-								<span>851 California St<br />
-								San Francisco, CA 94108<br />
-								United States of America</span>
-							</div>
-						</section>
-					</section>
-				</div>
-			</section>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://github.com/Alhassan777" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="https://www.linkedin.com/in/alhassan-ahmed-6b3985203/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://medium.com/@alhassan_69618" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
-						<li><a href="https://www.instagram.com/alhassanahmedabd/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; 2024 Alhassan Ahmed™. All Rights Reserved To My Family and Friends for making me the person I am today.</li>
-					</ul>
-				</div>
-			</footer>
-		</div>
+            <!-- Contact -->
+            <section id="contact">
+                <div class="inner">
+                    <section>
+                        <form id="contact-form">
+                            <div class="fields">
+                                <div class="field half">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" name="name" id="name" required />
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Your Email</label>
+                                    <input type="email" name="email" id="email" required />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="6" required></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" class="primary" /></li>
+                                <li><input type="reset" value="Clear" /></li>
+                            </ul>
+                        </form>
+                    </section>
+                    <section class="split">
+                        <section>
+                            <div class="contact-method">
+                                <span class="icon solid alt fa-envelope"></span>
+                                <h3>Email</h3>
+                                <a href="mailto:alhassan@uni.minerva.edu">alhassan@uni.minerva.edu</a>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="contact-method">
+                                <span class="icon solid alt fa-phone"></span>
+                                <h3>Phone</h3>
+                                <span>(628) 246-5952 </span>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="contact-method">
+                                <span class="icon solid alt fa-home"></span>
+                                <h3>Address</h3>
+                                <span>851 California St<br />
+                                San Francisco, CA 94108<br />
+                                United States of America</span>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </section>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script type="text/javascript">
-		(function() {
-			emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
-		})();
+            <!-- Footer -->
+            <footer id="footer">
+                <div class="inner">
+                    <ul class="icons">
+                        <li><a href="https://github.com/Alhassan777" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/alhassan-ahmed-6b3985203/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="https://medium.com/@alhassan_69618" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+                        <li><a href="https://www.instagram.com/alhassanahmedabd/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>&copy; 2024 Alhassan Ahmed™. All Rights Reserved To My Family and Friends for making me the person I am today.</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
 
-		document.getElementById('contact-form').addEventListener('submit', function(event) {
-			event.preventDefault(); // Prevent the default form submission
-			
-			// Get form data
-			const formData = new FormData(this);
-			
-			// Log form data for debugging
-			for (const [key, value] of formData.entries()) {
-				console.log(`${key}: ${value}`);
-			}
-			
-			// Send form data using EmailJS
-			emailjs.sendForm('service_sn2wiaf', 'template_3ppwape', this)
-				.then(function() {
-					alert('Message sent successfully!');
-				}, function(error) {
-					console.log('FAILED...', error); // Log the error to the console for debugging
-					alert('Failed to send the message. Please try again.');
-				});
-		});
-	</script>		
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("m_gvD1pvzYaFjtJ6C"); // Use your actual Public Key from EmailJS
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Send form data using EmailJS
+            emailjs.sendForm('service_sn2wiaf', 'template_3ppwape', this)
+                .then(function() {
+                    alert('Message sent successfully!');
+                }, function(error) {
+                    console.log('FAILED...', error); // Log the error to the console for debugging
+                    alert('Failed to send the message. Please try again.');
+                });
+        });
+    </script>     
 </body>
 </html>

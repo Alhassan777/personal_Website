@@ -8,17 +8,203 @@
     <link rel="shortcut icon" type="x-icon" href="images/Cartoonify.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("m_gvD1pvzYaFjtJ6C"); // Replace with your actual EmailJS Public Key
+        })();
+    </script>
     <style>
-       
+        /* Define accent color variables based on the provided palette */
+        :root {
+            --light-blue: #DEDEEA;
+            --medium-light-blue: #BCB9D8;
+            --medium-blue: #8488B5;
+            --darker-blue: #61678B;
+            --light-cyan: #98BFD0;
+            --medium-cyan: #78ACC1;
+            --white: #FFFFFF;
+        }
+        
+        /* General Background and Font Colors */
+        body {
+            background-color: var(--white);
+            color: var(--darker-blue);
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        /* Header and Footer */
+        #header, #footer {
+            background-color: var(--medium-blue);
+            color: var(--white);
+            border-bottom: 2px solid var(--medium-light-blue);
+        }
+        
+        /* Header Navigation */
+        #header .nav-buttons a {
+            color: var(--light-cyan);
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        #header .nav-buttons a:hover {
+            color: var(--medium-cyan);
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            border-left: 2px solid var(--medium-light-blue);
+            padding-left: 20px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+            color: var(--darker-blue);
+        }
+       .timeline-item::before {
+    display: none;
+}
+        
+        /* Headings */
+        h1, h3{
+            color: var(--medium-blue);
+        }
+        
+        
+        /* Job Descriptions */
+        .timeline-item p.text-muted {
+            color: var(--darker-blue);
+        }
+        
+        /* Button Centering */
+        .download-resume-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        /* Download Resume Button Styling */
+        .download-resume {
+            background-color: var(--medium-cyan);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .download-resume:hover {
+            background-color: var(--light-cyan);
+        }
+        
+        /* Contact Section */
+        #contact {
+            padding: 40px 0;
+            border-top: 2px solid var(--medium-light-blue);
+        }
+        
+        .contact-method h3 {
+            color: var(--medium-blue);
+            font-weight: bold;
+        }
+        .contact-info {
+            color: var(--darker-blue);
+        }
+        
+        /* Form Styling */
+        #contact-form .form-field label {
+            color: var(--darker-blue);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+        
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form textarea {
+            border: 1px solid var(--medium-light-blue);
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        #contact-form input[type="text"]:focus,
+        #contact-form input[type="email"]:focus,
+        #contact-form textarea:focus {
+            border-color: var(--medium-cyan);
+        }
+        
+        /* Align Contact Form Buttons */
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+    
+        /* Button Styling */
+        .primary, .clear {
+            background-color: var(--medium-light-blue); /* Light purple color */
+            color: var(--white); /* White text for contrast */
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            border: none; /* Remove border for cleaner look */
+            transition: background-color 0.3s ease;
+        }
+    
+        /* Hover Effects */
+        .primary:hover, .clear:hover {
+            background-color: var(--medium-blue); /* Darker purple for hover */
+        }
+        
+        /* Footer */
+        #footer {
+            background-color: var(--medium-blue);
+            color: var(--white);
+            padding: 20px 0;
+        }
+        
+        .icons a {
+            color: var(--light-cyan);
+            padding: 10px;
+        }
+        .icons a:hover {
+            color: var(--white);
+        }
+        
+        /* Footer Text */
+        #footer .copyright {
+            color: var(--white);
+            font-size: 0.9em;
+        }
+        .company {
+            font-weight: bold;
+        }
+        .role {
+            font-weight: bold;
+            color: var(--medium-cyan);
+        }
     </style>
+    
+    
 </head>
 <body class="is-preload">
     <div id="wrapper">
-        <!-- Header -->
+        <!-- Header with Navigation Buttons -->
         <header id="header" class="alt style2">
-            <a href="index.html" class="logo"><strong>return home</strong> ></a>
+            <div class="text-center nav-buttons">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+            </div>
         </header>
-
         <!-- Section: Timeline -->
         <section class="py-5">
             <div class="container">
@@ -31,10 +217,10 @@
                                 <img src="images/Minerva_Schools_at_KGI_Seal.png" class="img-fluid" alt="Experience 3">
                             </div>
                             <div class="col-md-8">
-                                <h5 class="fw-bold">Product Development Intern </h5>
+                                <h5 class="role">Product Development Intern </h5>
                                 <p class="text-muted mb-2 fw-bold"> May 2024- Present </p>
                                 <p class="text-muted">
-                                    <p> Minerva University </p>
+                                    <p class="company"> Minerva University </p>
                                     ● Analyzed 15 datasets using AI techniques like K-clustering and Latent Dirichlet Allocation (LDA), resulting in actionable insights that transformed the admissions process.
                                     <br>● Developed an integrity check proposal to automate the flagging of duplicate applications using IP tracking, email analysis (Levenshtein Distance, N-gram Analysis, Jaccard Similarity), and geolocation verification, enhancing efficiency and accuracy.
                                     <br>● Utilized SQL for data analysis to extract, process, and analyze large datasets, contributing to data-driven recommendations for improving the admissions process.
@@ -48,10 +234,10 @@
                                 <img src="images/headstarter.avif" class="img-fluid" alt="Experience 2">
                             </div>
                             <div class="col-md-8 order-md-1">
-                                <h5 class="fw-bold">Software Engineering Fellow</h5>
+                                <h5 class="role">Software Engineering Fellow</h5>
                                 <p class="text-muted mb-2 fw-bold">June 2024 - Present</p>
                                 <p class="text-muted">
-                                    <p> Headstarter AI </p>
+                                    <p class="company"> Headstarter AI </p>
                                     ● Enhanced course matching accuracy by 50% by leading the development of an AI-powered chatbot using NLP and vector embeddings with Google’s gemma-7b-it and VoyageAI.
                                     <br>
                                     ● Improved user satisfaction by 30% by conducting comprehensive user research and implementing a sophisticated matching algorithm.
@@ -69,10 +255,10 @@
                                 <img src="images/Expatrio.png" class="img-fluid" alt="Experience 3">
                             </div>
                             <div class="col-md-8">
-                                <h5 class="fw-bold">Product Manager</h5>
+                                <h5 class="role">Product Manager</h5>
                                 <p class="text-muted mb-2 fw-bold"> January 2024- April 2024</p>
                                 <p class="text-muted">
-                                    <p> Expatrio </p>
+                                    <p class="company"> Expatrio </p>
                                     ● Enhanced course matching accuracy by 50% by leading the development of an AI-powered chatbot using NLP and vector embeddings with Google’s gemma-7b-it and VoyageAI.
                                     <br>
                                     ● Improved user satisfaction by 30% by conducting comprehensive user research and implementing a sophisticated matching algorithm.
@@ -90,10 +276,10 @@
                                 <img src="images/infinyx logo.webp" class="img-fluid" alt="Experience 4">
                             </div>
                             <div class="col-md-8 order-md-1">
-                                <h5 class="fw-bold">Product Manager</h5>
+                                <h5 class="role">Product Manager</h5>
                                 <p class="text-muted mb-2 fw-bold">September 2023- December 2023</p>
                                 <p class="text-muted">
-                                    <p> infinyx co. </p>
+                                    <p class="company"> infinyx co. </p>
                                     ● Led the development of a comprehensive business model for a dementia prevention AI-powered mobile application, targeting Japanese and Korean seniors.
                                     <br>
                                     ● Collaborated with the technical team to integrate AI technologies, including OpenAI API (Whisper) for speech-to-text and AWS Transcription API, into the business strategy.
@@ -109,10 +295,10 @@
                                 <img src="images/Mobalytics.jpg" class="img-fluid" alt="Experience 5">
                             </div>
                             <div class="col-md-8">
-                                <h5 class="fw-bold">Marketing Extern</h5>
+                                <h5 class="role">Marketing Extern</h5>
                                 <p class="text-muted mb-2 fw-bold">January 2024 - April 2024</p>
                                 <p class="text-muted">
-                                    <p> Mobalytics </p>
+                                    <p class="company"> Mobalytics </p>
                                     ● Conducted comprehensive market research on leading battle royale games (PUBG, DayZ, and Fortnite: STW), proposing actionable insights for product enhancement.
                                     <br>● Identified an untapped market opportunity by leveraging community insights from Discord, proposing the creation of specialized competitive hubs.
                                     <br>● Applied advanced quantitative and qualitative analysis using Python libraries such as Pandas and Matplotlib to derive actionable insights.
@@ -126,10 +312,10 @@
                                 <img src="images/Minerva_Schools_at_KGI_Seal.png" class="img-fluid" alt="Experience 6">
                             </div>
                             <div class="col-md-8 order-md-1">
-                                <h5 class="fw-bold">Coaching and Talent Development Team Intern Manager</h5>
+                                <h5 class="role">Coaching and Talent Development Team Intern Manager</h5>
                                 <p class="text-muted mb-2 fw-bold">June 2023- July 2023</p>
                                 <p class="text-muted">
-                                    <p> Minerva University </p>
+                                    <p class="company"> Minerva University </p>
                                     ● Developed 20+ personal and professional development workbooks on Notion, empowering students to explore and excel in their career paths.
                                     <br>● Conducted interviews to assess potential coaching candidates, enhancing the coaching team’s effectiveness.
                                 </p>
@@ -142,10 +328,10 @@
                                 <img src="images/Minerva_Schools_at_KGI_Seal.png" class="img-fluid" alt="Experience 7">
                             </div>
                             <div class="col-md-8">
-                                <h5 class="fw-bold">Project Management Intern</h5>
+                                <h5 class="role">Project Management Intern</h5>
                                 <p class="text-muted mb-2 fw-bold">September 2022 - April 2023</p>
                                 <p class="text-muted">
-                                    <p> Minerva Project </p>
+                                    <p class="company"> Minerva Project </p>
                                     ● Implemented an 8-month plan for Minerva’s work-study project to facilitate task delegation and management.
                                     <br>● Established a Notion database to organize and track the progress of 35 interns in the work-study project.
                                 </p>
@@ -158,10 +344,10 @@
                                 <img src="images/YouthSF.png" class="img-fluid" alt="Experience 8">
                             </div>
                             <div class="col-md-8 order-md-1">
-                                <h5 class="fw-bold">Product Designer</h5>
+                                <h5 class="role">Product Designer</h5>
                                 <p class="text-muted mb-2 fw-bold">September 2022 - April 2023</p>
                                 <p class="text-muted">
-                                    <p> YouthSF </p>
+                                    <p class="company"> YouthSF </p>
                                     ● Initiated user research efforts in preparation for utilizing gamification to develop public speaking skills.
                                     <br>● Led a team of 5 through the design thinking process by organizing 13 idealization-iteration sessions.
                                     <br>● Designed an educational aesthetic board game to improve public speaking skills for middle school students.
@@ -175,7 +361,7 @@
                                 <img src="images/obm_education_logo.jpg" class="img-fluid" alt="Experience 9">
                             </div>
                             <div class="col-md-8">
-                                <h5 class="fw-bold">Marketing Coordinator</h5>
+                                <h5 class="role">Marketing Coordinator</h5>
                                 <p class="text-muted mb-2 fw-bold">October 2020 - April 2021</p>
                                 <p class="text-muted">
                                     <p> OBM Education </p>
@@ -188,77 +374,95 @@
                         </div>
                     </ul>
                 </ul>
-            </div>
+                <div class="download-resume-container">
+                    <a href="assets/files/Elhassan Elboraey SWE resume.pdf" class="download-resume" download>Download My Resume</a>
+                </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="inner">
-                <section>
-                    <form method="post" action="#">
-                        <div class="form-field">
-                            <label for="name">Your Name</label>
-                            <input type="text" name="name" id="name" />
-                        </div>
-                        <div class="form-field">
-                            <label for="email">Your Email</label>
-                            <input type="text" name="email" id="email" />
-                        </div>
-                        <div class="form-field full">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="6"></textarea>
-                        </div>
-                        <div class="actions">
-                            <input type="submit" value="Send Message" class="primary" />
-                            <input type="reset" value="Clear" class="clear" />
-                        </div>
-                    </form>
-                </section>
-                <div class="contact-container">
-                    <div class="contact-method">
-                        <span class="icon solid alt fa-envelope"></span>
-                        <div class="contact-info">
-                            <h3>Email</h3>
-                            <a href="mailto:alhassan@uni.minerva.edu">alhassan@uni.minerva.edu</a>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <span class="icon solid alt fa-phone"></span>
-                        <div class="contact-info">
-                            <h3>Phone</h3>
-                            <span>(628) 246-5952</span>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <span class="icon solid alt fa-home"></span>
-                        <div class="contact-info">
-                            <h3>Address</h3>
-                            <span>851 California St<br>San Francisco, CA 94108<br>United States of America</span>
-                        </div>
-                    </div>
+ <!-- Contact Section -->
+ <section id="contact">
+    <div class="inner">
+        <section>
+            <form id="contact-form">
+                <div class="form-field">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" id="name" required />
+                </div>
+                <div class="form-field">
+                    <label for="email">Your Email</label>
+                    <input type="email" name="email" id="email" required />
+                </div>
+                <div class="form-field full">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="6" required></textarea>
+                </div>
+                <div class="actions">
+                    <input type="submit" value="Send Message" class="primary" />
+                    <input type="reset" value="Clear" class="clear" />
+                </div>
+            </form>                    
+        </section>
+        <div class="contact-container">
+            <div class="contact-method">
+                <span class="icon solid alt fa-envelope"></span>
+                <div class="contact-info">
+                    <h3>Email</h3>
+                    <a href="mailto:alhassan@uni.minerva.edu">alhassan@uni.minerva.edu</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="inner">
-                <ul class="icons">
-                    <li><a href="https://github.com/Alhassan777" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/alhassan-ahmed-6b3985203/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://medium.com/@alhassan_69618" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
-                    <li><a href="https://www.instagram.com/alhassanahmedabd/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-                </ul>
-                <ul class="copyright">
-                    <li>&copy; 2024 Alhassan Ahmed™. All Rights Reserved To My Family and Friends for making me the person I am today.</li>
-                </ul>
+            <div class="contact-method">
+                <span class="icon solid alt fa-phone"></span>
+                <div class="contact-info">
+                    <h3>Phone</h3>
+                    <span>(628) 246-5952</span>
+                </div>
             </div>
-        </footer>
+            <div class="contact-method">
+                <span class="icon solid alt fa-home"></span>
+                <div class="contact-info">
+                    <h3>Address</h3>
+                    <span>851 California St<br>San Francisco, CA 94108<br>United States of America</span>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
-    <!-- Include Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <ul class="icons">
+            <li><a href="https://github.com/Alhassan777" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/alhassan-ahmed-6b3985203/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://medium.com/@alhassan_69618" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+            <li><a href="https://www.instagram.com/alhassanahmedabd/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; 2024 Alhassan Ahmed™. All Rights Reserved To My Family and Friends for making me the person I am today.</li>
+        </ul>
+    </div>
+</footer>
+</div>
+
+<!-- Include Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- EmailJS Contact Form Script -->
+<script type="text/javascript">
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    
+    // Send form data using EmailJS
+    emailjs.sendForm('service_sn2wiaf', 'template_3ppwape', this)
+        .then(function() {
+            alert('Message sent successfully!');
+        }, function(error) {
+            console.log('FAILED...', error); // Log the error to the console for debugging
+            alert('Failed to send the message. Please try again.');
+        });
+});
+</script>
 </body>
 </html>

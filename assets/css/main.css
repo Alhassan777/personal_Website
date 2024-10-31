@@ -2509,15 +2509,9 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: transparent;
 		border: 0;
 		border-radius: 0;
 		box-shadow: inset 0 0 0 2px #ffffff;
-		color: #ffffff;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8em;
@@ -2668,12 +2662,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		button.primary,
-		.button.primary {
-			background-color: #ffffff;
-			box-shadow: none;
-			color: #242943;
-		}
-
+		
 			input[type="submit"].primary:hover, input[type="submit"].primary:active,
 			input[type="reset"].primary:hover,
 			input[type="reset"].primary:active,
@@ -2684,7 +2673,6 @@ input, select, textarea {
 			.button.primary:hover,
 			.button.primary:active {
 
-				color: #242943 !important;
 			}
 
 			input[type="submit"].primary:active,
@@ -3753,7 +3741,7 @@ input, select, textarea {
 
 		#footer .copyright li {
 			border-left: solid 1px rgba(212, 212, 255, 0.1);
-			color: rgba(244, 244, 255, 0.2);
+			color: rgba(244, 244, 255, 0.939);
 			display: inline-block;
 			line-height: 1;
 			margin-left: 1em;
