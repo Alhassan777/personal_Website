@@ -8,100 +8,209 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-.project-content a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    margin-bottom: 30px; /* Add margin to space out the boxes */
-    max-width: 300px; /* Set a maximum width for the project boxes */
-    text-align: center;
-}
-
-.project-content a:hover {
-    transform: scale(1.05);
-}
-
-.project-work {
-    padding: 20px;
-    background-color: #2c3e50;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.project-work-image {
-    width: 100%;
-    height: 200px; /* Set a fixed height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: #fff; /* Background color for padding */
-    border-radius: 10px;
-}
-
-.project-work-image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Ensures image scales to fit without cropping */
-}
-
-.project-work {
-    padding: 20px;
-    background-color: #2c3e50;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.project-work:hover {
-    transform: scale(1.05);
-}
-
-.project-work-text {
-    padding: 10px 0;
-}
-
-.project-work-text h5 {
-    margin: 10px 0;
-    font-size: 1.2em;
-    color: #fff;
-}
-
-.project-work-text p {
-    margin: 0;
-    font-size: 0.9em;
-    color: #ddd;
-}
-
-
-.project-title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #fff;
-}
-
-.project-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the boxes */
-    gap: 20px; /* Add space between the boxes */
-}
-
-.project-content {
-    display: flex;
-    justify-content: center; /* Center the content within each box */
-    flex-basis: calc(33.333% - 40px); /* Three columns layout with space between */
-    box-sizing: border-box;
-}
-
+        /* Define accent color variables based on the provided palette */
+        :root {
+            --light-blue: #DEDEEA;
+            --medium-light-blue: #BCB9D8;
+            --medium-blue: #8488B5;
+            --darker-blue: #61678B;
+            --light-cyan: #98BFD0;
+            --medium-cyan: #78ACC1;
+            --white: #FFFFFF;
+        }
+    
+        /* General Background and Font Colors */
+        body {
+            background-color: var(--white);
+            font-family: 'Roboto', sans-serif;
+            color: var(--darker-blue);
+        }
+    
+        /* Header and Footer */
+        #header, #footer {
+            background-color: var(--medium-blue);
+            color: var(--white);
+            border-bottom: 2px solid var(--medium-light-blue);
+        }
+    
+        /* Banner */
+        #banner {
+            background-color: var(--light-blue);
+            color: var(--darker-blue);
+        }
+        #banner .content p {
+            color: var(--darker-blue);
+        }
+        #banner .highlight {
+            color: var(--medium-cyan);
+        }
+     /* Headings */
+        h1, h3, a {
+            color: var(--white);
+        }
+        .text-span {
+            color: var(--white);
+        }
+        /* Project Section */
+        .project-content a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 1px solid var(--medium-light-blue);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 30px;
+            max-width: 300px;
+            text-align: center;
+        }
+    
+        .project-content a:hover {
+            transform: scale(1.05);
+        }
+    
+        .project-work {
+            padding: 20px;
+            background-color: var(--medium-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            box-sizing: border-box;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .project-work:hover {
+            transform: scale(1.05);
+        }
+    
+        .project-work-image {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: var(--white);
+            border-radius: 10px;
+        }
+    
+        .project-work-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    
+        .project-work-text h5 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: var(--white);
+        }
+    
+        .project-work-text p {
+            margin: 0;
+            font-size: 0.9em;
+            color: var(--light-blue);
+        }
+    
+        .project-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: var(--darker-blue);
+        }
+    
+        .project-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    
+        /* Contact Section */
+        #contact {
+            padding: 40px 0;
+            border-top: 2px solid var(--medium-light-blue);
+            background-color: var(--darker-blue);
+        }
+    
+        /* Contact Method Titles */
+        #contact .contact-method h3 {
+            color: var(--white);
+            font-weight: bold;
+        }
+    
+        /* Contact Info Text */
+        #contact .contact-info {
+            color: var(--white);
+        }
+    
+        /* Form Styling */
+        #contact-form .form-field label {
+            color: var(--light-cyan);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+    
+        /* Input Fields */
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form textarea {
+            background-color: var(--medium-light-blue);
+            color: var(--darker-blue);
+            border: 1px solid var(--medium-light-blue);
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+    
+        /* Input Fields Focus */
+        #contact-form input[type="text"]:focus,
+        #contact-form input[type="email"]:focus,
+        #contact-form textarea:focus {
+            border-color: var(--light-cyan);
+        }
+    
+        /* Button Styling */
+        .primary, .clear {
+            background-color: var(--medium-light-blue);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .primary:hover, .clear:hover {
+            background-color: var(--medium-cyan);
+        }
+    
+        /* Footer Styling */
+        #footer {
+            background-color: var(--medium-blue);
+            color: var(--white);
+            padding: 20px 0;
+        }
+        #footer .icons a {
+            color: var(--light-cyan);
+            padding: 10px;
+        }
+        #footer .icons a:hover {
+            color: var(--white);
+        }
+        #footer .copyright {
+            color: var(--white);
+            font-size: 0.9em;
+        }
     </style>
+    
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -217,7 +326,7 @@
                             </div>
                             <ul class="actions">
                                 <li><input type="submit" value="Send Message" class="primary" /></li>
-                                <li><input type="reset" value="Clear" /></li>
+                                <li><input type="reset" value="Clear" class="clear" /></li>
                             </ul>
                         </form>
                     </section>
@@ -233,14 +342,14 @@
                             <div class="contact-method">
                                 <span class="icon solid alt fa-phone"></span>
                                 <h3>Phone</h3>
-                                <span>(628) 246-5952 </span>
+                                <span class="text-span">(628) 246-5952 </span>
                             </div>
                         </section>
                         <section>
                             <div class="contact-method">
                                 <span class="icon solid alt fa-home"></span>
                                 <h3>Address</h3>
-                                <span>851 California St<br />
+                                <span class="text-span">851 California St<br />
                                 San Francisco, CA 94108<br />
                                 United States of America</span>
                             </div>

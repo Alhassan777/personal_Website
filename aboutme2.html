@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Who is Alhassan?!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="shortcut icon" type="x-icon" href="images/Cartoonify.png">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+    /* Define accent color variables based on the provided palette */
+    :root {
+        --light-blue: #DEDEEA;
+        --medium-light-blue: #BCB9D8;
+        --medium-blue: #8488B5;
+        --darker-blue: #61678B;
+        --light-cyan: #98BFD0;
+        --medium-cyan: #78ACC1;
+        --white: #FFFFFF;
+    }
+    
+    /* General Background and Font Colors */
+    body {
+        background-color: var(--light-blue);
+        color: var(--darker-blue);
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    /* Header and Footer */
+    #header, #footer {
+        background-color: var(--medium-blue);
+        color: var(--white);
+        border-bottom: 2px solid var(--medium-light-blue);
+    }
+    #footer {
+        padding: 20px 0;
+    }
+    
+    /* Header Navigation */
+    #header .nav-buttons a {
+        color: var(--light-cyan);
+        text-decoration: none;
+        padding: 10px 20px;
+        font-weight: bold;
+    }
+    #header .nav-buttons a:hover {
+        color: var(--medium-cyan);
+    }
+    
+    .spotlights {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.spotlight {
+    display: flex;
+    align-items: stretch; /* Stretch items to the same height */
+    gap: 20px;
+}
+
+.spotlight .image {
+    flex: 1;
+    position: relative; /* Needed for absolute positioning */
+    overflow: hidden; /* Hide overflow for hover effect */
+}
+
+.spotlight .content {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spotlight .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover Effect Styles */
+.spotlight .image .default-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.spotlight .image .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Hide the hover image by default */
+    transition: opacity 0.5s ease-in-out;
+}
+ /* Center-aligned quote text with improved typography */
+ .quote-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        color: #F0F8FF; /* Light color to contrast against dark background */
+        font-family: 'Georgia', serif;
+    }
+
+    .quote-text {
+        font-style: italic;
+        font-weight: 600;
+        font-size: 1.8em; /* Increased size for emphasis */
+        line-height: 1.5;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for better visibility */
+        color: var(--light-cyan);
+    }
+
+    .quote-author {
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 1em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #D3D3D3; /* Slightly lighter color for the author text */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+.spotlight .image:hover .hover-image {
+    opacity: 1; /* Show the hover image on hover */
+}
+
+.spotlight .image:hover .default-image {
+    opacity: 0; /* Hide the default image on hover */
+}
+    
+    /* Headings */
+    h1, h3 {
+        color: var(--medium-blue);
+    }
+    
+    h3
+    /* Contact Section */
+    #contact {
+        padding: 40px 0;
+        border-top: 2px solid var(--medium-light-blue);
+        background-color: var(--light-blue);
+    }
+    .contact-method h3 {
+        color: var(--medium-blue);
+        font-weight: bold;
+    }
+    .contact-info {
+        color: var(--darker-blue);
+    }
+    
+    /* Contact Form */
+    #contact-form label {
+        color: var(--darker-blue);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0.9em;
+        text-transform: uppercase;
+    }
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        border: 1px solid var(--medium-light-blue);
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    #contact-form input[type="text"]:focus,
+    #contact-form input[type="email"]:focus,
+    #contact-form textarea:focus {
+        border-color: var(--medium-cyan);
+    }
+    
+    /* Form Buttons */
+    .actions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .primary, .clear {
+        background-color: var(--medium-light-blue);
+        color: var(--white);
+        padding: 12px 30px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1em;
+        border: none;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+    .primary:hover, .clear:hover {
+        background-color: var(--medium-blue);
+    }
+    
+    /* Footer Links and Icons */
+    .icons a {
+        color: var(--light-cyan);
+        padding: 10px;
+    }
+    .icons a:hover {
+        color: var(--white);
+    }
+    #footer .copyright {
+        color: var(--white);
+        font-size: 0.9em;
+    }
+    
+   /* Responsive Design for Smaller Screens */
+@media (max-width: 800px) {
+    .spotlight {
+        flex-direction: column;
+    }
+    .spotlight .image,
+    .spotlight .content {
+        width: 100%;
+        flex: none;
+    }
+    .spotlight .image {
+        height: auto;
+    }
+    .spotlight .image img {
+        height: auto;
+        object-fit: contain;
+    }
+    }
+    p {
+        color: var(--dark-cyan);
+    }
+    </style>
+
+    <!-- EmailJS Initialization -->
+    <script type="text/javascript">
+        (function() { emailjs.init("m_gvD1pvzYaFjtJ6C"); })();
+    </script>
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Banner -->
+        <section id="banner" class="style2">
+            <div class="inner">
+                <span class="image">
+                    <img src="images/forest.jpeg" alt="Image" />
+                </span>
+                <div class="quote-container">
+                    <h3 class="quote-text">"You think you know someone, and then they surprise you." </h3>
+                    <p class="quote-author">— Alicia Nash — A Beautiful Mind (2001)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spotlights -->
+        <section id="two" class="spotlights">
+
+            <!-- Spotlight 1 -->
+            <section class="spotlight">
+                <div class="image">
+                    <img src="images/conntecting2.jpeg" alt="Cairo, Egypt" />
+                    <img src="images/connecting.jpeg" alt="Cairo Hover" class="hover-image" />
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <header class="major">
+                            <h3>A passionate writer and captivating storyteller</h3>
+                        </header>
+                        <p>I am a person who loves to connect and communicate with people. My means of expression are through storytelling. Whether they are real stories inspired by my experiences (like those in my journey to earn <a href="story.html">global citizenship</a>, or fictional stories that draw from my life <a href="https://medium.com/@alhassan_69618">check my medium</a>, <a href="https://drive.google.com/drive/folders/11abUxj10-fmGwfJNa3VHoo5m4fU4TM8S?usp=sharing">and this drive</a> for some of my writtings) I am driven by the power of narrative.</p>
+				
+                        <p>One of the points that also intrigues me in life is giving to others. I believe God created us as groups and societies to interact and help each other. The quote <strong><em><span style="color: red;">"with great power comes great responsibility"</span></em></strong> from Spider-Man resonates deeply with me. For the past three years, I have been unofficially mentoring several students back home, helping them achieve their dream of studying abroad. I am thankful that their efforts culminated in finally reaching their dreams, with me being a part of their story.</p>
+                        
+                        <p>I have shared my experiences and lessons learned academically, personally, and professionally in multiple podcasts featuring international students studying abroad.</p>
+                        
+                        <p><strong style="color: var(--medium-cyan);">Ta2shira</strong> in Arabic – <a href="https://open.spotify.com/episode/14tSId363l88wP20ojYIYr" target="_blank">link to Ta2shira podcast</a></p>
+                        <p><strong style="color: var(--medium-cyan);"> Qaisa Taleb</strong> in Arabic – <a href="https://open.spotify.com/episode/1xzArmclVJfbOx1HsuI7tF?fbclid=IwZXh0bgNhZW0CMTEAAR1zkUUEYmbJPNQHg8bAGK6ti_yIERiR6R6PsI15L7NcpCmCCBd3Ck9ptw0_aem_8sM9pIAQHpCChlYrNIDszw" target="_blank">link to Qaisa Taleb podcast</a></p>
+                        <p><strong style="color: var(--medium-cyan);">Humans of Minerva</strong> in English – <a href="https://share.descript.com/view/7BT2ZTauWh7" target="_blank">link to Humans of Minerva podcast</a></p>				
+                    </div>
+                </div>
+            </section>
+
+            <!-- Spotlight 2 -->
+            <section class="spotlight">
+                <div class="image">
+                    <img src="images/hallassan.png" alt="San Francisco, United States" />
+                    <img src="images/Bussan Nights.jpeg" alt="San Francisco Hover" class="hover-image" />
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <header class="major">
+                            <h3>Avid Gamer, Nocturnal City Explorer, and Passionate Hiker</h3>
+                        </header>
+                        <p>I have been an avid <strong style="color: var(--medium-cyan);">FIFA</strong> player since middle school, deeply involved in many communities of players in Egypt who played <strong style="color: var(--medium-cyan);">Ultimate Team</strong>, the online mode of FIFA. After traveling abroad for university, I had to part ways with my PlayStation, but the passion for the game remained. Fortunately, one of my classmates has a PS5, allowing me to continue playing FIFA with friends every now and then. This hobby keeps me connected to my love for soccer, even though my skills in real football don't quite match up to my virtual prowess.</p>
+
+<p>In addition to gaming, I find joy in exploring cities at night. There is something magical about the city after sunset. I love taking long walks, discovering hidden corners and quiet streets that come alive in a different way under the night sky. These nocturnal explorations have allowed me to see different dimensions of the cities I've lived in. In <strong style="color: var(--medium-cyan);">San Francisco</strong>, I witnessed the stark contrast to the city's daytime reputation as a tech paradise and gold mine for tech-savvy individuals. At night, the streets are often empty, save for the pitiful homeless who cannot afford a place to live. In <strong style="color: var(--medium-cyan);">Korea</strong>, my night walks in December and January were filled with calm, cold city vibes. Despite the biting cold, there was a warm feeling of safety and peacefulness. In <strong style="color: var(--medium-cyan);">Berlin</strong>, the nights felt harsh, gloomy, and dark, adding a different layer of experience to my stay there. These nocturnal explorations allow me to appreciate the beauty and tranquility of the urban environment, find inspiration in solitude, and reflect on my day. It's a unique hobby that combines my love for adventure and my curiosity about the world around me.</p>
+
+<p>Another way I connect with my surroundings is through hiking. This hobby allows me to find peace away from the hustle and bustle of everyday life. In <strong style="color: var(--medium-cyan);">Korea</strong>, I explored the majestic <strong style="color: var(--medium-cyan);">Hallasan</strong> and <strong style="color: var(--medium-cyan);">Bukhasan</strong> mountains, where the stunning landscapes and challenging trails provided a sense of accomplishment and serenity. In <strong style="color: var(--medium-cyan);">San Francisco</strong>, my favorite hiking spots include <strong style="color: var(--medium-cyan);">Twin Peaks</strong>, <strong style="color: var(--medium-cyan);">Mount Sutro</strong>, and <strong style="color: var(--medium-cyan);">Battery Spencer</strong>. <strong style="color: var(--medium-cyan);">Twin Peaks</strong> offers breathtaking panoramic views of the city, <strong style="color: var(--medium-cyan);">Mount Sutro</strong> provides a lush, forested escape right in the heart of the city, and <strong style="color: var(--medium-cyan);">Battery Spencer</strong> gives a unique perspective of the Golden Gate Bridge and the bay. Each hike is a new adventure that brings with it a sense of accomplishment and a deeper appreciation for the outdoors.</p>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Spotlight 3 -->
+            <section class="spotlight">
+                <div class="image">
+                    <img src="images/Marvel 2.jpeg" alt="Berlin, Europe" />
+                    <img src="images/Marvel 1.jpeg" alt="Germany Hover" class="hover-image" />
+                </div>
+                <div class="content">
+                    <div class="inner">
+                        <h3>Anime otaku, Marvel Fan, </h3>
+                    </header>
+                    <p>As an avid fan of TV shows and movies, I immerse myself in the captivating worlds of <strong style="color: var(--medium-cyan);">anime</strong>, <strong style="color: var(--medium-cyan);">Marvel</strong>, "Game of Thrones," and <strong style="color: var(--medium-cyan);">Harry Potter</strong>. Being an Anime Otaku, I have a deep appreciation for the artistry, storytelling, and character development that anime offers. Shows like <strong style="color: var(--medium-cyan);">"Naruto"</strong>, <strong style="color: var(--medium-cyan);">"Attack on Titan"</strong>, and <strong style="color: var(--medium-cyan);">"My Hero Academia"</strong> have not only entertained me but also taught me valuable life lessons about perseverance, friendship, and courage. I enjoy diving into different genres, from action-packed shonen to heartwarming slice-of-life stories, always eager to discover new and exciting series.</p>
+
+                    <p>On the other hand, my love for <strong style="color: var(--medium-cyan);">the Marvel Universe</strong> runs just as deep. As a Marvel Fan, I have been enthralled by the intricate storytelling and interconnected narratives that span across movies and TV shows. From the epic adventures of the <strong style="color: var(--medium-cyan);">Avengers</strong> to the gripping tales of the <strong style="color: var(--medium-cyan);">X-Men</strong>, the Marvel Cinematic Universe (MCU) has kept me on the edge of my seat. The blend of superhero action, humor, and emotional depth in series like <strong style="color: var(--medium-cyan);">"WandaVision"</strong>, <strong style="color: var(--medium-cyan);">"Loki"</strong>, and <strong style="color: var(--medium-cyan);">"The Falcon and the Winter Soldier"</strong> has made the MCU a significant part of my entertainment landscape.</p>
+                    
+                    <p>Additionally, my zeal for <strong style="color: var(--medium-cyan);">Game of Thrones</strong> has been an exciting journey through the complex and politically charged world of Westeros. The intricate plotlines, compelling characters, and unexpected twists in <strong style="color: var(--medium-cyan);">"Game of Thrones"</strong> have made it a series that I passionately followed. The show's ability to blend fantasy elements with real human drama has provided countless hours of gripping entertainment and profound reflection on themes like power, loyalty, and survival.</p>
+                    
+                    <p>Moreover, I am an admirer of the <strong style="color: var(--medium-cyan);">Harry Potter</strong> series. The magical world created by J.K. Rowling has been a significant part of my childhood and continues to enchant me to this day. The adventures of <strong style="color: var(--medium-cyan);">Harry</strong>, <strong style="color: var(--medium-cyan);">Hermione</strong>, and <strong style="color: var(--medium-cyan);">Ron</strong> at <strong style="color: var(--medium-cyan);">Hogwarts School of Witchcraft and Wizardry</strong> have ignited my imagination and instilled in me a sense of wonder and the belief in the extraordinary. The themes of friendship, bravery, and the fight against evil resonate deeply with me.</p>
+                    
+    
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="inner">
+                <section>
+                    <form id="contact-form">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="name">Your Name</label>
+                                <input type="text" name="name" id="name" required />
+                            </div>
+                            <div class="field half">
+                                <label for="email">Your Email</label>
+                                <input type="email" name="email" id="email" required />
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="6" required></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                            <li><input type="reset" value="Clear" class="clear" /></li>
+                        </ul>
+                    </form>
+                </section>
+                <section class="split">
+                    <section>
+                        <div class="contact-method">
+                            <span class="icon solid alt fa-envelope"></span>
+                            <h3>Email</h3>
+                            <a href="mailto:alhassan@uni.minerva.edu">alhassan@uni.minerva.edu</a>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="contact-method">
+                            <span class="icon solid alt fa-phone"></span>
+                            <h3>Phone</h3>
+                            <span>(628) 246-5952 </span>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="contact-method">
+                            <span class="icon solid alt fa-home"></span>
+                            <h3>Address</h3>
+                            <span>851 California St<br />
+                            San Francisco, CA 94108<br />
+                            United States of America</span>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="https://github.com/Alhassan777" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/alhassan-ahmed-6b3985203/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://medium.com/@alhassan_69618" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+                    <li><a href="https://www.instagram.com/alhassanahmedabd/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; 2024 Alhassan Ahmed™. All Rights Reserved To My Family and Friends for making me the person I am today.</li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- EmailJS Script -->
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("m_gvD1pvzYaFjtJ6C"); // Use your actual Public Key from EmailJS
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Send form data using EmailJS
+            emailjs.sendForm('service_sn2wiaf', 'template_3ppwape', this)
+                .then(function() {
+                    alert('Message sent successfully!');
+                }, function(error) {
+                    console.log('FAILED...', error); // Log the error to the console for debugging
+                    alert('Failed to send the message. Please try again.');
+                });
+        });
+    </script>
+
+</body>
+</html>
