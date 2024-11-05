@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G333WJ6D1M"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G333WJ6D1M');
+    </script>
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="x-icon" href="images/Cartoonify.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -189,15 +197,31 @@
     <script>
         function navigateTo(section) {
             if (section === 'professional') {
-                window.location.href = "experience.html"; // Link to Professional Experience page
+                gtag('event', 'click', {
+                    'event_category': 'Button',
+                    'event_label': 'For Recruiters',
+                    'value': 1
+                });
+                window.location.href = "experience.html";
             } else if (section === 'student') {
-                window.location.href = "story.html"; // Link to International Student Journey page
+                gtag('event', 'click', {
+                    'event_category': 'Button',
+                    'event_label': 'For International Students',
+                    'value': 1
+                });
+                window.location.href = "story.html";
             } else if (section === 'personal') {
-                window.location.href = "aboutme.html"; // Link to Personal Story and Interests page
+                gtag('event', 'click', {
+                    'event_category': 'Button',
+                    'event_label': 'For Curious Minds',
+                    'value': 1
+                });
+                window.location.href = "aboutme.html";
             } else {
-                window.location.href = "homepage.html"; // Link to a general Explore page showing all sections
+                window.location.href = "homepage.html";
             }
         }
     </script>
+    
 </body>
 </html>
