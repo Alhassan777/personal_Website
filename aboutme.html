@@ -129,6 +129,47 @@
     opacity: 0; /* Hide the hover image by default */
     transition: opacity 0.5s ease-in-out;
 }
+/* Default styling for the image container */
+.image {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling for the default image */
+.default-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Styling for the hover image */
+.hover-image-special {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Hidden by default */
+    z-index: 2;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease;
+}
+
+/* Show the hover image on hover */
+.image:hover .hover-image-special {
+    opacity: 1; /* Reveal hover image */
+    transform: scale(1.05); /* Slight zoom effect to emphasize hover */
+}
+
+/* Hide the default image on hover */
+.image:hover .default-image {
+    opacity: 0; /* Hide default image */
+}
+
+
  /* Center-aligned quote text with improved typography */
  .quote-container {
         display: flex;
@@ -304,8 +345,8 @@
             <!-- Spotlight 1 -->
             <section class="spotlight">
                 <div class="image">
-                    <img src="images/conntecting2.jpeg" alt="Cairo, Egypt" />
-                    <img src="images/connecting.jpeg" alt="Cairo Hover" class="hover-image" />
+                    <img src="images/conntecting2.jpeg" alt="Cairo, Egypt" class="default-image" />
+                    <img src="images/Me and Helal.jpeg" alt="Cairo Hover" class="hover-image-sepcial" />
                 </div>
                 <div class="content">
                     <div class="inner">
