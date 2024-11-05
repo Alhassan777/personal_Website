@@ -24,7 +24,42 @@
         color: var(--darker-blue);
         font-family: 'Roboto', sans-serif;
     }
-    
+    /* Banner section with relative positioning to allow absolute positioning of buttons */
+#banner {
+    position: relative;
+}
+
+/* Button container styling for overlay effect */
+.button-container {
+    position: absolute;
+    top: 20px; /* Adjust the distance from the top */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px; /* Adjust side padding for spacing from edges */
+    z-index: 2; /* Ensure the buttons are above the image */
+}
+
+/* Button styling */
+.button-container a {
+    background-color: var(--medium-cyan);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1em;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Hover effect */
+.button-container a:hover {
+    background-color: var(--medium-blue);
+    transform: translateY(-2px);
+}
+
     /* Header and Footer */
     #header, #footer {
         background-color: var(--medium-blue);
@@ -243,12 +278,15 @@
 </head>
 
 <body>
-
+    
     <!-- Wrapper -->
     <div id="wrapper">
-
         <!-- Banner -->
         <section id="banner" class="style2">
+            <div class="button-container">
+                <a href="homepage.html">Unfold the Rest of the Journey 🌌 ?!</a>
+                <a href="projects.html">Wanna See My Portfolio 💻 ?!</a>
+            </div>
             <div class="inner">
                 <span class="image">
                     <img src="images/forest.jpeg" alt="Image" />

@@ -24,7 +24,44 @@
         color: var(--darker-blue);
         font-family: 'Roboto', sans-serif;
     }
-    
+  /* Ensure #banner has relative positioning */
+#banner {
+    position: relative;
+    overflow: hidden; /* Ensure content is clipped to fit within */
+    background-color: var(--light-blue); /* Set the background color */
+}
+
+/* Overlay button container styling */
+.button-container {
+    position: absolute;
+    top: 20px; /* Distance from the top of the banner */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px; /* Adjust side padding */
+    z-index: 2; /* Ensure buttons are above the background image */
+}
+
+/* Button styling */
+.button-container a {
+    background-color: var(--medium-cyan);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1em;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Hover effect */
+.button-container a:hover {
+    background-color: var(--medium-blue);
+    transform: translateY(-2px);
+}
+  
     /* Header and Footer */
     #header, #footer {
         background-color: var(--medium-blue);
@@ -140,7 +177,6 @@
         color: var(--medium-blue);
     }
     
-    h3
     /* Contact Section */
     #contact {
         padding: 40px 0;
@@ -247,8 +283,11 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Banner -->
         <section id="banner" class="style2">
+            <div class="button-container">
+                <a href="homepage.html">Unfold the Rest of the Journey 🌌 ?!</a>
+                <a href="aboutme.html">Wanna See Learn about my interests 🤹?!</a>
+            </div>
             <div class="inner">
                 <span class="image">
                     <img src="images/IMG_0879.jpg" alt="Image" />
@@ -259,6 +298,7 @@
                 </div>
             </div>
         </section>
+        
 
         <!-- Spotlights -->
         <section id="two" class="spotlights">
